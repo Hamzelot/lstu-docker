@@ -1,0 +1,33 @@
+---
+version: "3"
+
+services:
+  lstu:
+    container_name: lstu
+    image: "hamzelot/lstu"
+    build: .
+    ports:
+      - 8080:8080
+    volumes:
+      - "data:/usr/lstu/db"
+    restart: "unless-stopped"
+    environment:
+      UID: 1000
+      GID: 1000
+      URL_LENGTH: 8
+      USE_PROXY: 0
+      CONTACT: "name@email.eu"
+      THEME: "default"
+      PROVIS_STEP: 5
+      PROVISIONING: 100
+      URL_PREFIX: "/"
+      X_FRAME: "DENY"
+      X_CONTENT_TYPE: "nosniff"
+      X_XSS_PROTECTION: "1; mode=block"
+      LOG_CREATOR_IP : 0
+      SKIP_SPAMHAUS: 0
+      MAX_REDIR: 2
+      BAN_MIN_STRIKE: 3
+
+volumes:
+  data:

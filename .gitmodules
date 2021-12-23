@@ -1,0 +1,3 @@
+[submodule "lstu"]
+	path = lstu
+	url = https://framagit.org/fiat-tux/hat-softwares/lstu.git
