@@ -8,6 +8,8 @@ The writer of the lstu-software is [Luc Didry](https://framagit.org/fiat-tux/hat
 
 ## Installation
 
+If you run the docker build yourself, the git submodules must be reloaded.
+
 ### Docker Compose
 
 Please adjust the environment variables in the .docker-compose file then start
