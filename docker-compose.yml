@@ -24,10 +24,9 @@ services:
       X_FRAME: "DENY"
       X_CONTENT_TYPE: "nosniff"
       X_XSS_PROTECTION: "1; mode=block"
-      LOG_CREATOR_IP : 0
+      LOG_CREATOR_IP: 0
       SKIP_SPAMHAUS: 0
       MAX_REDIR: 2
       BAN_MIN_STRIKE: 3
-
 volumes:
   data:

@@ -14,7 +14,7 @@ if [ ! -z ${LISTEN+x} ]; then
     sed -i -e "s|# listen|listen  => \[${LISTEN}\],|" /usr/lstu/lstu.conf
 fi
 if [ ! -z ${BAN_WHITELIST+x} ]; then 
-    sed -i -e "s|#ban_whitelist => \[\],|ban_whitelist  => [${BAN_WHITELIST}],|" /usr/lstu/lstu.conf
+    sed -i -e "s|#ban_whitelist => \[\],|ban_whitelist  => \[${BAN_WHITELIST}\],|" /usr/lstu/lstu.conf
 fi
 if [ ! -z ${BAN_BLACKLIST+x} ]
 then 
@@ -26,8 +26,6 @@ fi
 if [ ! -z ${PIWIK+x} ]; then 
     sed -i -e "s|#piwik => {|piwik => {${PIWIK}},|g" /usr/lstu/lstu.conf
 fi
-
-cat /usr/lstu/lstu.conf
 
 gosu lstu "$@"
 
